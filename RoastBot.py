@@ -10,8 +10,8 @@ InsultList = ["You're a LOSER", 'Suck it', 'OP is a phaggot', 'come at me, bro',
 @app.route("/", methods=['GET', 'POST'])
 def run():
     reply = selectreply()
-    print("<h1>The RoastBot is RUNNING</h1>")
-    return roast(reply)
+    roast = roast(reply)
+    return roast
     
 
 def roast(reply):
