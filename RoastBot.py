@@ -6,20 +6,12 @@ app = Flask(__name__)
 
 InsultList = ["You're a LOSER", 'Suck it', 'OP is a phaggot', 'come at me, bro', 'Please stop talking to me']
 
-
 @app.route("/", methods=['GET', 'POST'])
 def run():
-    reply = selectreply()
-    roast = roast(reply)
-    return roast
-    
-
-def roast(reply):
+    random = randint(0, len(InsultList))
+    insult = InsultList[random]
     """Respond to incoming texts"""
-    response = MessagingResponse().message(reply)
+    response = MessagingResponse().message(insult)
     return str(response)
 
-
-def selectreply():
-    random = randint(0, len(InsultList))
-    return InsultList[random]
+   
