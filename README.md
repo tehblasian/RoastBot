@@ -1,5 +1,5 @@
 # A Simple RoastBot
-A simple bot that insults you via SMS! Written in Python 2.7
+## A simple bot that insults you via SMS! Written in Python 2.7
 
 The bot will either select an insult from a user-created list, or fetch a random one from http://www.randominsults.net
 
